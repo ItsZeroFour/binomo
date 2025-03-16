@@ -1,0 +1,149 @@
+.first__chat__wrapper {
+  background: var(--color-white);
+
+  border: 1px solid rgba(51, 85, 51, 0.333);
+  border-radius: 10px;
+
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: auto;
+
+  .first__chat__link {
+    width: 90%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: auto;
+
+    a {
+      display: block;
+      margin-bottom: 30px;
+      width: 100%;
+      padding: 10px;
+      border-radius: 50px;
+      font-size: 20px;
+      text-align: center;
+      background: var(--color-yellow);
+
+      @media (max-width: 450px) {
+        margin-bottom: 115px;
+      }
+    }
+  }
+
+  @media (max-width: 450px) {
+    border: none;
+    border-radius: 0;
+  }
+}
+
+.first__chat__user {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+
+  .first__chat__avatar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background: #e8e8e8;
+    overflow: hidden;
+
+    img {
+      width: 45px;
+      height: auto;
+      object-fit: cover;
+      margin-top: 5px;
+    }
+  }
+
+  h3 {
+    font-size: 16px;
+    font-family: "Nunito-md", sans-serif;
+    font-weight: 500;
+  }
+}
+
+.first__chat__history {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 0 20px;
+  margin-top: 40px;
+
+  .first__chat__message__last {
+    align-items: start;
+
+    .first__chat__message__content {
+      background: #e8e8e8;
+    }
+
+    .first__chat__message__avatar {
+      img {
+        width: 35px;
+      }
+    }
+  }
+}
+
+.first__chat__message {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 10px;
+}
+
+.first__chat__message__avatar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #e8e8e8;
+  overflow: hidden;
+
+  img {
+    width: 30px;
+    height: auto;
+    object-fit: cover;
+    margin-top: 5px;
+  }
+}
+
+.first__chat__message__content {
+  width: 90%;
+  padding: 10px 15px;
+  background: var(--color-yellow);
+  border-radius: 10px;
+
+  p {
+    font-size: 14px;
+    font-family: "Nunito-md", sans-serif;
+    font-weight: 500;
+  }
+
+  @media (max-width: 450px) {
+    width: 80%;
+  }
+
+  @media (max-height: 320px) {
+    padding: 10px;
+  }
+}

@@ -1,0 +1,159 @@
+.friend_chat__wrapper {
+  background: var(--color-white);
+  border: 1px solid rgba(51, 85, 51, 0.333);
+  border-radius: 10px;
+
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  // align-items: center;
+
+  @media (max-width: 450px) {
+    border: none;
+    border-radius: 0;
+  }
+}
+
+.friend_chat__friend {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  margin-top: 20px;
+
+  div {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background: #e8e8e8;
+    overflow: hidden;
+
+    img {
+      width: 65px;
+      height: auto;
+      margin-top: 5px;
+      margin-left: -5px;
+    }
+  }
+
+  h2 {
+    font-size: 16px;
+  }
+}
+
+.friend_chat__history {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 0 20px;
+  margin-top: 40px;
+
+  .friend_chat__message__last {
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    width: 100%;
+
+    .friend_chat__message__content {
+      background: #e8e8e8;
+      width: fit-content;
+    }
+
+    .friend_chat__message__avatar {
+      img {
+        width: 35px;
+      }
+    }
+  }
+}
+
+.friend_chat__message {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 10px;
+  width: fit-content;
+}
+
+.friend_chat__message__avatar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 45px !important;
+  height: 45px !important;
+  border-radius: 50%;
+  background: #e8e8e8;
+  overflow: hidden;
+
+  img {
+    width: 30px;
+    height: auto;
+    object-fit: cover;
+    margin-top: 16px;
+  }
+}
+
+.friend_chat__container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.friend_chat__link {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: auto;
+  margin-bottom: 20px;
+
+  button,
+  a {
+    width: 90%;
+    padding: 10px;
+    background: var(--color-yellow);
+    border-radius: 40px;
+    font-size: 20px;
+    text-align: center;
+
+    @media (max-width: 450px) {
+      font-size: 18px;
+    }
+  }
+
+  @media (max-width: 450px) {
+    position: absolute;
+    top: 73%;
+    width: 100%;
+  }
+}
+
+.friend_chat__link_2 {
+  top: 78%;
+}
+
+.friend_chat__message__content {
+  width: 90%;
+  padding: 10px 15px;
+  background: var(--color-yellow);
+  border-radius: 10px;
+
+  p {
+    font-size: 14px;
+    font-family: "Nunito-md", sans-serif;
+    font-weight: 500;
+  }
+
+  @media (max-width: 450px) {
+    width: 80%;
+  }
+
+  @media (max-height: 320px) {
+    padding: 10px;
+  }
+}

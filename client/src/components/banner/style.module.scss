@@ -1,0 +1,74 @@
+.banner {
+  background: linear-gradient(86.24deg, #ffdc3c -2.6%, #ffdc3c 121.29%);
+  height: 70px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.banner > a {
+  width: 100%;
+  height: 100%;
+  position: relative;
+
+  img {
+    position: absolute;
+
+    &:last-child {
+      right: -10%;
+      top: -80%;
+    }
+
+    &:first-child {
+      left: -5%;
+    }
+  }
+}
+
+.banner__text {
+  text-align: center;
+  color: var(--color-light-black);
+
+  h2 {
+    font-size: 36px;
+    font-family: "NunitoSans-eb", sans-serif;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+
+    svg {
+      margin-right: 10px;
+    }
+  }
+
+  p {
+    font-size: 9px !important;
+
+    a {
+      text-decoration: underline;
+    }
+  }
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+}
+
+.banner__text h2 {
+  position: relative;
+  display: inline-block;
+  animation: fadeInOut 4s infinite;
+}
+
+// Binomo mini-game uses AI to create unique trading scenarios. Players learn trading, earn virtual money, and buy virtual goods and upgrades. The game features animations, interactive elements, and an achievement system to enhance engagement and education.

@@ -1,0 +1,48 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "High-performance, scalable Node.js server for a mobile trading game. Handles real-time financial transactions, manages player portfolios, and synchronizes dynamic market data across multiple users.",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start:dev": "nodemon server.js"
+  },
+  "keywords": [
+    "node.js",
+    "trading",
+    "game",
+    "mobile",
+    "real-time",
+    "multiplayer",
+    "server",
+    "financial",
+    "stocks",
+    "crypto",
+    "market",
+    "transactions",
+    "portfolio",
+    "API",
+    "websockets",
+    "scalable"
+  ],
+  "author": "t.me/ItsZeroFour",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.7.7",
+    "bcrypt": "^5.1.1",
+    "body-parser": "^1.20.3",
+    "comfy-ui-client": "^0.1.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.0",
+    "form-data": "^4.0.0",
+    "fs": "^0.0.1-security",
+    "helmet": "^7.1.0",
+    "http": "^0.0.1-security",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.5-lts.1",
+    "nodemon": "^3.1.7",
+    "path": "^0.12.7",
+    "ws": "^8.18.0"
+  }
+}

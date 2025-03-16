@@ -1,0 +1,61 @@
+.call_friend__wrapper {
+  background-image: url("../../assets/images/bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 1px solid rgba(51, 85, 51, 0.333);
+  border-radius: 10px;
+
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  @media (max-width: 450px) {
+    border: none;
+    border-radius: 0;
+  }
+}
+
+.call_friend__panel {
+  position: absolute;
+  height: 400px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  h1 {
+    font-size: 30px;
+
+    font-family: "Nunito-bd", sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+}
+
+.call_friend__reset {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  div {
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: var(--color-red);
+
+    border-radius: 50%;
+  }
+
+  p {
+    font-family: "Nunito-md", sans-serif;
+    font-weight: 500;
+  }
+}

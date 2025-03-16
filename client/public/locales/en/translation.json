@@ -1,0 +1,140 @@
+{
+  "sister": "Sister",
+  "reset": "Reset",
+  "reply": "Reply",
+  "sisterMsg1": "Raj, hey! 🎉 Do you remember you promised to buy us IPL season pass for my birthday? 🎂 Well, the sale ends soon…",
+  "sisterMsg2": "Hello, darling! 👋 Yeah, sure, I’ll get it right away.",
+  "goToSiteButton": "Go to the site",
+
+  "seasonPassTitle": "IPL SEASON PASS, 33500₹",
+  "seasonPassText": "Until the end of sales: 4 days",
+  "seasonPassButton": "Buy pass",
+
+  "bankNot": "You don't have enough funds. Balance:",
+  "bankButton": "Call a friend for advice",
+
+  "friendName": "DEVLAN",
+  "friendMessage1": "Hey, Devlan! 🤙How are you doing?",
+  "friendMessage2": "Hi, Raj 🤝 All good, I have bought the IPL season pass yesterday 🏏 I remember you and your sister were going too.",
+  "friendMessage3": "Yeah, that's exactly my point 😭 here's the situation, two days until the end of the sale, and I'm tight on money right now....",
+  "friendMessage4": "I see, can I help you?",
+  "friendMessage5": "Yes, can you borrow 30,000₹?🙏🙏🙏 I will definitely return it!",
+  "friendMessage6": "No, I'm sorry 😬 I don't have that much free money right now.",
+  "friendMessage7": "Please give me an advice what I can do to earn some money 🙏🙏🙏",
+  "friendMessage8": "You know, my cousin was telling me about some trading platform last week. I haven't had a chance to try it myself yet, but here's a link, check it out 👉 binomo.com",
+  "friendButton1": "Asking for a loan",
+  "friendButton2": "Asking for an advice",
+  "friendButton3": "See the platform",
+
+  "afterChat1Title": "Don't give up, and you can again",
+  "afterChat1Text": "Become successful on Binomo like Mr. Blumberg in cricket",
+  "afterChat1Button": "Next",
+
+  "afterChat2Text": "Hey! Nice to meet you! My name is Mr. Blumberg, I am an investor!  I’m glad to tell you about Binomo!",
+  "afterChat2Button": "Wow, thanks!",
+
+  "afterChat3Text": "Yes! Trade amount starting from $1so you won't lose a large amount of funds while you're still learning how to trade.",
+  "afterChat3Button": "Can I earn money here?",
+
+  "afterChat4Text": "Yes! You can open a trade for any amount from 80₹",
+  "afterChat4Button": "Can I train before trading?",
+
+  "afterChat5Name": "Mr. Blumberg",
+  "afterChat5Text": "You can top up your balance in different ways and without commission",
+  "afterChat5Button": "So I can easily earn here?",
+
+  "afterChat6Title": "Register at",
+  "afterChat6Text": "Enter promo code GAME1000 in the deposit section and get a chance to win $200!",
+  "afterChat6Promo": "GAME1000",
+  "afterChat6Button1": "Stay in the game",
+  "afterChat6Button2": "GET A CHANCE",
+  "afterChat6Button3": "Promotion rules",
+
+  "afterChat7Text": "I know that you have to earn money to buy IPL season pass. You can earn it here, but I kindly recommend you to pass education first...",
+  "afterChaT7Button1": "Let's try right now!",
+  "afterChaT7Button2": "Let's start from education!",
+
+  "education1Name": "Mr. Blumberg",
+  "education1Text": "Binomo has many educational lectures that will help you learn how to trade",
+  "education1Button": "SOUNDS GOOD",
+
+  "education2Title1": "Upcoming",
+  "education2Title2": "Past",
+  "education2Today": "Today",
+  "education2Tomorrow": "Tomorrow",
+  "education2Text1": "Tokyo CPI",
+  "education2Text2": "Fed's Chair Powell Speech",
+  "education2Text3": "Monthly consumer price index",
+  "education2Text4": "We also have a calendar where you can see the dates of important events - for example, non-farm.",
+  "education2Button": "Non-farm? What is it?",
+
+  "education3Text": "The Non-Farm Payrolls (NFP) report shows U.S. job growth outside farming. It causes big market moves and signals economic health.",
+  "education3Button": "How can I find this information?",
+
+  "education4ImageText1": "The U.S. economy added 336,000 jobs",
+  "education4ImageText2": "Oil prices will rise by 20%",
+  "education4ImageText3": "Football review",
+  "education4ImageText4": "Weather forecast",
+  "education4Text": "Follow the news that is written on this topic. Click on the appropriate news on this screen.",
+  "educationButton1": "Help me to choose",
+
+  "education5Text": "This news indicates that the dollar will rise. Now you can go to Binomo and try trading.",
+  "education5Button": "Let's try!",
+
+  "education7Text": "Now you can trade on your own!",
+  "education7Demo": "Your balance",
+  "education7Down": "Down",
+  "education7Up": "Up",
+  "education7Ok": "Ok",
+  "educationGraphickText": "No, you're wrong. I still advise you to go through a simple training first.",
+
+  "educationGraphickUp": "We just read the news that the dollar will rise. Better click \"Down\".",
+  "educationGraphickDown": "We just read the news that the dollar will rise. Better click \"Up\".",
+  "educationGraphickThird": "We just read the news that the dollar will rise.",
+  "educationGraphickThirdText": "Great! Now you can buy an IPL season pass!",
+  "educationGraphickButton": "Text friends",
+
+  "educationGraphickFirstTextFirst": "No, you're wrong. I still advise you to go through a simple training first.",
+  "educationGraphickFirstText": "You have to predict whether the graph will go up or down",
+
+  "groupTitle": "Sister and Devlan's group",
+  "groupMessage1": "Guys, I've earned money on trading! @Sister, now I can buy IPL pass for us!",
+  "groupMessage2": "Honey, I'm so glad! You are the best brother in the world!",
+  "groupMessage3": "Wow bro you really did it! I'll meet you on cricket match this weekend",
+  "groupButton": "TRADE RIGHT NOW",
+
+  "uploadImageTitle": "TAKE A PHOTO WITH Mr. Blumberg",
+  "uploadImageText": "By checking this box, you confirm that you have read, understood, and agree to be bound by these",
+  "uploadImageRules": "Rules of Use",
+
+  "uploadImagePhoto": "Take a photo",
+  "uploadImageUpload": "Upload an image",
+  "uploadImageNot": "AI will generate photo with you and Mohhamed Mr. Blumberg",
+  "uploadCameraButton1": "Try another photo",
+  "uploadCameraButton2": "Ok",
+  "uploadImageLoading": "Loading....",
+
+  "uploadImageWaiting": "Waiting.....",
+
+  "imageGeneratedButton1": "Share with friends",
+  "imageGeneratedButton2": "Try another photo",
+  "imageGeneratedButton3": "Talk with Mr. Blumberg",
+
+  "gameStartText": "Great! Now let's make a photo together",
+  "gameStartButton1": "Let`s go",
+  "gameStartButton2": "No, thanks",
+
+  "gameFinalTitle": "share on social networks",
+  "gameDownload": "Download",
+  "gameCopy": "Copy",
+
+  "finalTitle": "Now it’s a time for a real trading!",
+  "finalTextPart1": "The list of winners will be published on 26 November.",
+  "finalTextPart2": "of participation in the contest.",
+  "finalTextLink": "Rules",
+  "finalText2": "TAKE A CHANCE TO WIN REAL MONEY",
+  "finalText3": "Enter the promo code and get 100% of the deposit",
+  "finalButton": "Go to Binomo",
+
+  "copyNotification": "Successfully copied to clipboard"
+}

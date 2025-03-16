@@ -1,0 +1,45 @@
+.neyro_image_generate__wrapper {
+  background: var(--color-light-black);
+
+  border: 1px solid rgba(51, 85, 51, 0.333);
+  border-radius: 10px;
+
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  overflow-y: auto;
+
+  gap: 10px;
+
+  @media (max-width: 450px) {
+    border: none;
+    border-radius: 0;
+    overflow-y: auto;
+  }
+}
+
+.neyro_image_generate__processing {
+  background: rgba(130, 130, 130, 0.1);
+  width: 90%;
+  height: 100%;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-yellow);
+
+  p {
+    font-size: 20px;
+  }
+}
+
+.neyro_image_generate__banner {
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
