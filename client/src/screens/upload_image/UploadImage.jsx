@@ -96,6 +96,10 @@ const UploadImage = () => {
       );
 
       if (res.data.url) {
+        if (window.ym) {
+          await window.ym(100582088, "reachGoal", "Ок sent photo");
+        }
+
         return navigate("/neyro-image-generate", {
           state: { file: file },
         });
@@ -116,7 +120,7 @@ const UploadImage = () => {
               {" "}
               {!image ? (
                 <>
-                  <h1>{t("uploadImageTitle")}</h1>
+                  <h1>Take a photo with Rajab butt</h1>
 
                   <div
                     className={style.upload_image__checkbox}
@@ -139,16 +143,24 @@ const UploadImage = () => {
                   >
                     <button
                       disabled={!check}
-                      onClick={() =>
+                      onClick={async () => {
                         check &&
-                        (isCamera
-                          ? navigate("/upload-image/camera")
-                          : navigate("/upload-image"))
-                      }
+                          (isCamera
+                            ? navigate("/upload-image/camera")
+                            : navigate("/upload-image"));
+
+                        if (window.ym) {
+                          await window.ym(
+                            100582088,
+                            "reachGoal",
+                            "Take a photo"
+                          );
+                        }
+                      }}
                     >
                       <img src={cameraImg} alt="camera" />
                       <h2>{t("uploadImagePhoto")}</h2>
-                      <p>{t("uploadImageNot")}</p>
+                      <p>AI will generate photo with you and Rajab Butt</p>
                     </button>
 
                     <input
@@ -162,10 +174,19 @@ const UploadImage = () => {
                     <label
                       disabled={!check}
                       htmlFor={check && "create-post-img"}
+                      onClick={async () => {
+                        if (window.ym) {
+                          await window.ym(
+                            100582088,
+                            "reachGoal",
+                            "Upload image"
+                          );
+                        }
+                      }}
                     >
                       <img src={imageImg} alt="image" />
                       <h2>{t("uploadImageUpload")}</h2>
-                      <p>{t("uploadImageNot")}</p>
+                      <p>AI will generate photo with you and Rajab Butt</p>
                     </label>
                   </div>
                 </>

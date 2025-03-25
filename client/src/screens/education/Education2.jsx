@@ -102,7 +102,16 @@ const Education2 = () => {
             </div>
           </div>
 
-          <Link to="/education-graphick-third">Go it!</Link>
+          <Link
+            onClick={async () => {
+              if (window.ym) {
+                await window.ym(100582088, "reachGoal", "Go it!");
+              }
+            }}
+            to="/education-graphick-third"
+          >
+            Go it!
+          </Link>
         </div>
       </div>
     </section>

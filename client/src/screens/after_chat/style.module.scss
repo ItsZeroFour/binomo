@@ -56,6 +56,10 @@
     transition: all 0.2s ease;
     text-align: center;
 
+    font-size: 20px;
+    font-family: "Nunito-md", sans-serif;
+    font-weight: 500;
+
     @media (max-width: 450px) {
       top: 79%;
     }
@@ -167,7 +171,7 @@
 
 .after_chat__person__second {
   img {
-    width: 250% !important;
+    width: 200% !important;
   }
 }
 
@@ -201,6 +205,10 @@
   width: fit-content;
   position: relative;
   margin-left: 40px;
+
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+  color: #979797;
 
   &::before {
     content: "";

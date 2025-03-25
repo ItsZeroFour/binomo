@@ -54,11 +54,15 @@
     justify-content: center;
     align-items: center;
     height: 85%;
-    margin-left: 30px;
 
     img {
       width: 340px;
       margin-right: 20px;
+    }
+
+    video {
+      border-radius: 10px;
+      width: 85%;
     }
 
     @media (max-height: 700px) {

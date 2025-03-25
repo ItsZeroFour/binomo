@@ -21,6 +21,10 @@ const ImageGenerated = () => {
   useEffect(() => {
     if (!aiImageName) {
       return navigate("/upload-image");
+    } else {
+      if (window.ym) {
+        window.ym(100582088, "reachGoal", "Generated");
+      }
     }
   }, [aiImageName]);
 

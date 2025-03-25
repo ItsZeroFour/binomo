@@ -119,7 +119,16 @@ const AfterChat = () => {
 
               <img src={afterChatPerson3} alt="after chat 3" />
 
-              <Link to="/education-7">Let’s train!</Link>
+              <Link
+                onClick={async () => {
+                  if (window.ym) {
+                    await window.ym(100582088, "reachGoal", "Let’s train! ");
+                  }
+                }}
+                to="/education-7"
+              >
+                Let’s train!
+              </Link>
             </div>
           ) : showScreenIndex === 3 ? (
             <div

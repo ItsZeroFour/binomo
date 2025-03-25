@@ -53,7 +53,7 @@ const EducationGraphickUp = () => {
           >
             <div className={style.educatio7__balance__demo}>
               <p>{t("education7Demo")}</p>
-              <h1>9900₹</h1>
+              <h1>2900Rs</h1>
             </div>
 
             <div className={style.educatio7__balance__currency}>

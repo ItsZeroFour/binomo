@@ -3,18 +3,15 @@ import style from "./style.module.scss";
 import { Link, useNavigate } from "react-router-dom";
 import tab from "../../assets/images/Tab.png";
 import { useTranslation } from "react-i18next";
+import conversionImage from "../../assets/video/conversion.mov";
 
 const ConversionFirst = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
 
   const handleLeadTracking = () => {
-    if (window.fbq !== undefined) {
-      window.fbq("track", "CompleteRegistration");
-    }
-
     if (window.ym) {
-      window.ym(98661745, "reachGoal", "binomial_start");
+      window.ym(100582088, "reachGoal", "Binomo go");
     }
   };
 
@@ -25,12 +22,13 @@ const ConversionFirst = () => {
           <div className={style.final__content}>
             <h1>Register at Binomo.com</h1>
             <p>
-              Enter promo code GAME1000 in the deposit section and get a chance
-              to win $200!
+              Enter promo code TRADINGGAME in the deposit section, add a minimum
+              deposit and get a chance to win DARAZ $100 certificate!
             </p>
 
             <div className={style.final__img}>
-              <img src={tab} alt="tab" />
+              {/* <img src={tab} alt="tab" /> */}
+              <video src={conversionImage} autoPlay loop muted></video>
             </div>
 
             <Link onClick={() => handleLeadTracking()} to="">
@@ -38,9 +36,7 @@ const ConversionFirst = () => {
             </Link>
 
             <div className={style.final__bottom}>
-              <Link to="/main">
-                Stay in the game
-              </Link>
+              <Link to="/main">Stay in the game</Link>
               <Link to="/">Promotion rules</Link>
             </div>
           </div>

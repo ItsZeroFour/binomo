@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import style from "./style.module.scss";
 import { motion } from "framer-motion";
-import sisterImageAvatar from "../../assets/images/sister_avatar.png";
+import brotherImageAvatar from "../../assets/images/friend.png";
 import personalImageAvatar from "../../assets/images/personal_avatar.png";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
@@ -73,10 +73,10 @@ const FirstChat = () => {
           <Banner />
           <div className={style.first__chat__user}>
             <div className={style.first__chat__avatar}>
-              <img src={sisterImageAvatar} alt="Sister" />
+              <img src={brotherImageAvatar} alt="brother" />
             </div>
 
-            <h3>{t("sister")}</h3>
+            <h3>{t("brother")}</h3>
           </div>
 
           <div className={style.first__chat__history}>
@@ -89,7 +89,7 @@ const FirstChat = () => {
                 transition={transition}
               >
                 <div className={style.first__chat__message__avatar}>
-                  <img src={sisterImageAvatar} alt="sister avatar" />
+                  <img src={brotherImageAvatar} alt="brother avatar" />
                 </div>
                 <div className={style.first__chat__message__content}>
                   <p>
@@ -110,7 +110,7 @@ const FirstChat = () => {
               >
                 <div className={style.first__chat__message__content}>
                   <p>
-                    Hey, sis! Yes, I remember it. I'm a little short of money,
+                    Hey, bro! Yes, I remember it. I'm a little short of money,
                     but I know what to do.
                   </p>
                 </div>
@@ -131,7 +131,7 @@ const FirstChat = () => {
               <Link
                 onClick={() => {
                   if (window.ym) {
-                    window.ym(98661745, "reachGoal", "sister");
+                    window.ym(100582088, "reachGoal", "brother");
                   }
                 }}
                 to="/after-chat"

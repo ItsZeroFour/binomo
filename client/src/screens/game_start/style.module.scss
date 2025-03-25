@@ -24,9 +24,10 @@
   position: absolute;
 
   img {
-    width: 1000px;
-    height: 1000px;
+    width: 700px;
+    height: 700px;
     object-fit: contain;
+    margin-top: 100px;
   }
 
   @media (max-width: 450px) {

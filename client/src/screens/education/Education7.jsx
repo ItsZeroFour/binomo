@@ -26,7 +26,7 @@ const Education7 = () => {
           <div className={style.educatio7__balance}>
             <div className={style.educatio7__balance__demo}>
               <p>{t("education7Demo")}</p>
-              <h1>10000Rs</h1>
+              <h1>3000Rs</h1>
             </div>
 
             <div className={style.educatio7__balance__currency}>

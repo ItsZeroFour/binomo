@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import style from "./style.module.scss";
 import { motion } from "framer-motion";
-import sisterImageAvatar from "../../assets/images/sister_avatar.png";
+import brotherImageAvatar from "../../assets/images/friend.png";
 import personalImageAvatar from "../../assets/images/personal_avatar.png";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
@@ -73,7 +73,7 @@ const FirstChat = () => {
           <Banner />
           <div className={style.first__chat__user}>
             <div className={style.first__chat__avatar}>
-              <img src={sisterImageAvatar} alt="Sister" />
+              <img src={brotherImageAvatar} alt="Sister" />
             </div>
 
             <h3>{t("sister")}</h3>
@@ -114,7 +114,7 @@ const FirstChat = () => {
                   </p>
                 </div>
                 <div className={style.first__chat__message__avatar}>
-                  <img src={sisterImageAvatar} alt="personal avatar" />
+                  <img src={brotherImageAvatar} alt="personal avatar" />
                 </div>
               </motion.div>
             )}
@@ -130,7 +130,7 @@ const FirstChat = () => {
               <Link
                 onClick={() => {
                   if (window.ym) {
-                    window.ym(98661745, "reachGoal", "sister");
+                    window.ym(100582088, "reachGoal", "Go to the match");
                   }
                 }}
                 to="/game-start"

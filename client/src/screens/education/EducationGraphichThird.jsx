@@ -76,7 +76,7 @@ const EducationGraphickThird = () => {
             <div className={style.educatio7__balance}>
               <div className={style.educatio7__balance__demo}>
                 <p>{t("education7Demo")}</p>
-                <h1>{text ? "55800" : "9900"}₹</h1>
+                <h1>{text ? "145250" : "9900"}Rs</h1>
               </div>
 
               <div className={style.educatio7__balance__currency}>

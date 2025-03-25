@@ -45,7 +45,7 @@ const Main = () => {
           </div>
 
           <div className={style.main__content}>
-            <h2>{t("sister")}</h2>
+            <h2>{t("brother")}</h2>
 
             <div className={style.main__content__navigation}>
               <div className={style.main__button__down}>

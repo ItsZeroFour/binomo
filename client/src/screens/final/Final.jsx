@@ -3,6 +3,7 @@ import style from "./style.module.scss";
 import { Link, useNavigate } from "react-router-dom";
 import tab from "../../assets/images/Tab.png";
 import { useTranslation } from "react-i18next";
+import conversionImage from "../../assets/video/conversion.mov";
 
 const Conversion = () => {
   const { t } = useTranslation();
@@ -25,12 +26,13 @@ const Conversion = () => {
           <div className={style.final__content}>
             <h1>Register at Binomo.com</h1>
             <p>
-              Enter promo code GAME1000 in the deposit section and get a chance
-              to win $200!
+              Enter promo code TRADINGGAME in the deposit section, add a minimum
+              deposit and get a chance to win DARAZ $100 certificate!
             </p>
 
             <div className={style.final__img}>
-              <img src={tab} alt="tab" />
+              {/* <img src={tab} alt="tab" /> */}
+              <video src={conversionImage} autoPlay loop muted></video>
             </div>
 
             <Link onClick={() => handleLeadTracking()} to="">
@@ -38,9 +40,7 @@ const Conversion = () => {
             </Link>
 
             <div className={style.final__bottom}>
-              <Link to="/">
-                Stay in the game
-              </Link>
+              <Link to="/">Stay in the game</Link>
               <Link to="/">Promotion rules</Link>
             </div>
           </div>

@@ -5,11 +5,11 @@ import coins from "../../assets/icons/coins.png";
 import { Link } from "react-router-dom";
 
 const Banner = () => {
-  const [text, setText] = useState("Win $200");
+  const [text, setText] = useState("Win A PRIZE");
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setText((prevText) => (prevText === "Win $200" ? "" : "Win $200"));
+      setText((prevText) => (prevText === "Win A PRIZE" ? "" : "Win A PRIZE"));
     }, 4000);
     return () => clearInterval(interval);
   }, []);
@@ -26,7 +26,7 @@ const Banner = () => {
         onClick={() => {
           handleLeadTracking();
           if (window.ym) {
-            window.ym(98661745, "reachGoal", "200");
+            window.ym(100582088, "reachGoal", "WIN PRIZE ");
           }
         }}
         to="/after-chat?index=5"
@@ -36,7 +36,7 @@ const Banner = () => {
         <img src={gifs} alt="gifs" />
         <div className={style.banner__text}>
           <h2>
-            {text !== "Win $200" && (
+            {text !== "Win A PRIZE" && (
               <div>
                 <svg
                   width="150"

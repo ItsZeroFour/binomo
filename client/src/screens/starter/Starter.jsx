@@ -1,6 +1,6 @@
 import React from "react";
 import style from "./style.module.scss";
-import manImg from "../../assets/images/after_chat.png";
+import manImg from "../../assets/images/after-chat-3.png";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 
@@ -42,7 +42,7 @@ const Starter = () => {
           <h1>Binomo trading game</h1>
           <p>
             Complete our game, take a photo with Rajab Butt and get a chance to
-            win $200!
+            win DARAZ $100 certificate!
           </p>
 
           <img src={manImg} alt="manImg" />
@@ -54,7 +54,7 @@ const Starter = () => {
                 navigate("/conversion");
 
                 if (window.ym) {
-                  window.ym(98661745, "reachGoal", "eng");
+                  window.ym(100582088, "reachGoal", "eng");
                 }
               }}
             >
@@ -66,7 +66,7 @@ const Starter = () => {
                 navigate("/conversion");
 
                 if (window.ym) {
-                  window.ym(98661745, "reachGoal", "hindi");
+                  window.ym(100582088, "reachGoal", "pakistan");
                 }
               }}
             >
