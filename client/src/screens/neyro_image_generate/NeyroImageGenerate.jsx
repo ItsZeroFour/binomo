@@ -53,9 +53,11 @@ const NeyroImageGenerate = () => {
         { filename: `${filename}` }
       );
 
+      console.log(uploadImageRes);
+
       if (uploadImageRes.data.images) {
         setAiImageGeneratedName(
-          uploadImageRes.data.images[118][0].image.filename
+          uploadImageRes.data.images[6][0].image.filename
         );
       }
     } catch (err) {}
