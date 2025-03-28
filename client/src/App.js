@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import Main from "./screens/Main/Main";
 import FirstChat from "./screens/FirstChat/FirstChat";
 import SeasonPass from "./screens/SeasonPass/SeasonPass";
@@ -16,7 +16,7 @@ import AfterChat from "./screens/after_chat/AfterChat";
 import Education1 from "./screens/education/Education1";
 import Education2 from "./screens/education/Education2";
 import Education3 from "./screens/education/Education3";
-import { Suspense, useEffect } from "react";
+import { Suspense, useEffect, useState } from "react";
 import Education7 from "./screens/education/Education7";
 import EducationGraphickUp from "./screens/education/EducationGraphickUp";
 import EducationGraphickDown from "./screens/education/EducationGraphickDown";
@@ -43,6 +43,26 @@ function preloadImages(images) {
 }
 
 function App() {
+  const [redirectUrl, setRedirectUrl] = useState(() => {
+    return (
+      localStorage.getItem("redirectUrl") ||
+      "https://binomo.com/cashier?code=TRADINGGAME"
+    );
+  });
+  const location = useLocation();
+
+  useEffect(() => {
+    const searchParams = new URLSearchParams(location.search);
+    const paramsString = searchParams.toString();
+    if (paramsString) {
+      const newUrl = `https://binomo.com/cashier?code=TRADINGGAME&${paramsString}`;
+      setRedirectUrl(newUrl);
+      localStorage.setItem("redirectUrl", newUrl);
+    }
+  }, [location.search]);
+
+  console.log(redirectUrl);
+
   useEffect(() => {
     preloadImages([
       afterChat1,
@@ -97,8 +117,8 @@ function App() {
                 element={<NeyroImageGenerate />}
               />
               <Route path="/image-generated" element={<ImageGenerated />} />
-              <Route path="/final" element={<Final />} />
-              <Route path="/conversion" element={<ConversionFirst />} />
+              <Route path="/final" element={<Final redirectUrl={redirectUrl} />} />
+              <Route path="/conversion" element={<ConversionFirst redirectUrl={redirectUrl} />} />
             </Routes>
           </main>
         </div>

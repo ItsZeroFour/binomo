@@ -61,7 +61,7 @@ const EducationGraphickThird = () => {
             >
               <img src={person2} alt="person" />
               <div>
-                <h3>{t("education1Name")}</h3>
+                <h3>Rajab Butt</h3>
                 <p>{t("educationGraphickThirdText")}</p>
               </div>
             </div>
@@ -103,7 +103,7 @@ const EducationGraphickThird = () => {
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.5 }}
               >
-                <Link to="/group-chat">Call sister</Link>
+                <Link to="/group-chat">Call brother</Link>
               </motion.div>
             )}
           </div>

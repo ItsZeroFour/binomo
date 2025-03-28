@@ -5,7 +5,7 @@ import tab from "../../assets/images/Tab.png";
 import { useTranslation } from "react-i18next";
 import conversionImage from "../../assets/video/conversion.mov";
 
-const Conversion = () => {
+const Conversion = ({ redirectUrl }) => {
   const { t } = useTranslation();
   const navigate = useNavigate();
 
@@ -35,7 +35,7 @@ const Conversion = () => {
               <video src={conversionImage} autoPlay loop muted></video>
             </div>
 
-            <Link onClick={() => handleLeadTracking()} to="">
+            <Link onClick={() => handleLeadTracking()} to={redirectUrl}>
               GET A CHANCE
             </Link>
 

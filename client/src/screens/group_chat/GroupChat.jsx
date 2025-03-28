@@ -76,7 +76,7 @@ const FirstChat = () => {
               <img src={brotherImageAvatar} alt="Sister" />
             </div>
 
-            <h3>{t("sister")}</h3>
+            <h3>Brother</h3>
           </div>
 
           <div className={style.first__chat__history}>
@@ -93,7 +93,7 @@ const FirstChat = () => {
                 </div>
                 <div className={style.first__chat__message__content}>
                   <p>
-                    Sis, I've earned money on trading! Now I can buy PSL pass
+                    Bro, I've earned money on trading! Now I can buy PSL pass
                     for us!
                   </p>
                 </div>
@@ -110,7 +110,7 @@ const FirstChat = () => {
               >
                 <div className={style.first__chat__message__content}>
                   <p>
-                    Honey, I'm so glad! You are the best brother in the world!
+                    Wow, I'm so glad! You are the best brother in the world!
                   </p>
                 </div>
                 <div className={style.first__chat__message__avatar}>

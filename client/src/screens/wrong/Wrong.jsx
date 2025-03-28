@@ -2,12 +2,15 @@ import React from "react";
 import style from "../after_chat/style.module.scss";
 import afterChatPerson1 from "../../assets/images/after-chat-3.png";
 import { Link } from "react-router-dom";
+import Banner from "../../components/banner/Banner";
 
 const Wrong = () => {
   return (
     <section className={style.after_chat}>
       <div className="container">
         <div className={`wrapper ${style.after_chat__wrapper}`}>
+          <Banner />
+
           <div
             className={`${style.after_chat__person} ${style.after_chat__person__first}`}
           >

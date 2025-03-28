@@ -86,7 +86,7 @@ const ImageGenerated = () => {
 
   const downloadImage = async () => {
     try {
-      const imageUrl = `${process.env.REACT_APP_DOMAIN_NAME.replace(
+      const imageUrl = `${process.env.REACT_APP_SERVER_URL.replace(
         "/api",
         ""
       )}/aiGet/${aiImageName}`;
@@ -111,7 +111,7 @@ const ImageGenerated = () => {
   const copyToClipboard = async () => {
     try {
       await navigator.clipboard.writeText(
-        `${process.env.REACT_APP_DOMAIN_NAME.replace(
+        `${process.env.REACT_APP_SERVER_URL.replace(
           "/api",
           ""
         )}/aiGet/${aiImageName}`

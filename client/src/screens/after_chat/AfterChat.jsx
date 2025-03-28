@@ -15,6 +15,7 @@ import popularItemQr from "../../assets/images/popular/qr.png";
 import tabImg from "../../assets/images/Tab.png";
 import { Link, useSearchParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import Banner from "../../components/banner/Banner";
 
 const preloadImages = (sources) => {
   sources.forEach((src) => {
@@ -66,11 +67,7 @@ const AfterChat = () => {
     <section className={style.after_chat}>
       <div className="container">
         <div className={`wrapper ${style.after_chat__wrapper}`}>
-          {showScreenIndex !== 4 && (
-            <div className={style.after_chat__header}>
-              <img src={logo} alt="logo" />
-            </div>
-          )}
+          {showScreenIndex !== 4 && <Banner />}
 
           {showScreenIndex === 0 ? (
             <div
@@ -111,9 +108,8 @@ const AfterChat = () => {
             >
               <div className={style.after_chat__message}>
                 <p>
-                  Yes! Trade amount starting from 3000Rs so you won't lose a
-                  large amount of funds while you're still learning how to
-                  trade.
+                  Yes! Trade amount started from 3000Rs, would you like to train
+                  in our simulator?
                 </p>
               </div>
 
