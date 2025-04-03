@@ -52,38 +52,10 @@ app.post("/api/upload", upload.single("image"), (req, res) => {
       res.json({ message: "Ошибка при загрузке файла" });
     } else {
       prompt = {
-        1: {
-          inputs: {
-            measurement: "Pixels",
-            left: 0,
-            right: ["110", 0],
-            top: 0,
-            bottom: 0,
-            image: ["63", 0],
-          },
-          class_type: "Image Inset Crop (rgthree)",
-          _meta: {
-            title: "Image Inset Crop (rgthree)",
-          },
-        },
-        2: {
-          inputs: {
-            measurement: "Pixels",
-            left: ["33", 0],
-            right: 0,
-            top: 0,
-            bottom: 0,
-            image: ["63", 0],
-          },
-          class_type: "Image Inset Crop (rgthree)",
-          _meta: {
-            title: "Image Inset Crop (rgthree)",
-          },
-        },
-        3: {
+        5: {
           inputs: {
             enabled: true,
-            swap_model: "inswapper_128.onnx",
+            swap_model: "reswapper_256.onnx",
             facedetection: "retinaface_resnet50",
             face_restore_model: "GFPGANv1.4.pth",
             face_restore_visibility: 1,
@@ -93,283 +65,15 @@ app.post("/api/upload", upload.single("image"), (req, res) => {
             input_faces_index: "0",
             source_faces_index: "0",
             console_log_level: 1,
-            input_image: ["2", 0],
-            source_image: ["15", 0],
+            input_image: ["59", 0],
+            source_image: ["50", 0],
           },
           class_type: "ReActorFaceSwap",
           _meta: {
             title: "ReActor 🌌 Fast Face Swap",
           },
         },
-        12: {
-          inputs: {
-            clip_name: "CLIP-ViT-H-fp16.safetensors",
-          },
-          class_type: "CLIPVisionLoader",
-          _meta: {
-            title: "Load CLIP Vision",
-          },
-        },
-        14: {
-          inputs: {
-            weight: 0.7000000000000001,
-            weight_type: "strong style transfer",
-            combine_embeds: "concat",
-            start_at: 0,
-            end_at: 0.8,
-            embeds_scaling: "V only",
-            model: ["122", 0],
-            ipadapter: ["30", 0],
-            image: ["15", 0],
-            clip_vision: ["12", 0],
-          },
-          class_type: "IPAdapterAdvanced",
-          _meta: {
-            title: "IPAdapter Advanced",
-          },
-        },
-        15: {
-          inputs: {
-            image: `facesImages/${req.file.filename}`,
-            upload: "image",
-          },
-          class_type: "LoadImage",
-          _meta: {
-            title: "Load Image",
-          },
-        },
-        18: {
-          inputs: {
-            positive: ["60", 0],
-            negative: ["61", 0],
-            vae: ["27", 2],
-            pixels: ["19", 0],
-            mask: ["72", 0],
-          },
-          class_type: "InpaintModelConditioning",
-          _meta: {
-            title: "InpaintModelConditioning",
-          },
-        },
-        19: {
-          inputs: {
-            image: "main_v1.png",
-            upload: "image",
-          },
-          class_type: "LoadImage",
-          _meta: {
-            title: "Load Image",
-          },
-        },
-        21: {
-          inputs: {
-            direction: "left",
-            match_image_size: false,
-            image1: ["3", 0],
-            image2: ["1", 0],
-          },
-          class_type: "ImageConcanate",
-          _meta: {
-            title: "Image Concatenate",
-          },
-        },
-        27: {
-          inputs: {
-            ckpt_name: "realisticVisionV60B1_v51HyperVAE.safetensors",
-          },
-          class_type: "CheckpointLoaderSimple",
-          _meta: {
-            title: "Load Checkpoint",
-          },
-        },
-        30: {
-          inputs: {
-            ipadapter_file: "ip-adapter-plus-face_sd15.safetensors",
-          },
-          class_type: "IPAdapterModelLoader",
-          _meta: {
-            title: "IPAdapter Model Loader",
-          },
-        },
-        33: {
-          inputs: {
-            value: 440,
-          },
-          class_type: "Int-🔬",
-          _meta: {
-            title: "Int",
-          },
-        },
-        57: {
-          inputs: {
-            model: ["14", 0],
-          },
-          class_type: "DifferentialDiffusion",
-          _meta: {
-            title: "Differential Diffusion",
-          },
-        },
-        60: {
-          inputs: {
-            text: ["95", 0],
-            clip: ["27", 1],
-          },
-          class_type: "CLIPTextEncode",
-          _meta: {
-            title: "CLIP Text Encode (Prompt)",
-          },
-        },
-        61: {
-          inputs: {
-            text: "(deformed iris, deformed pupils, semi-realistic, cgi, 3d, render, sketch, cartoon, drawing, anime, mutated hands and fingers:1.4), (deformed, distorted, disfigured:1.3), poorly drawn, bad anatomy, wrong anatomy, extra limb, missing limb, floating limbs, disconnected limbs, mutation, mutated, ugly, disgusting, amputation",
-            clip: ["27", 1],
-          },
-          class_type: "CLIPTextEncode",
-          _meta: {
-            title: "CLIP Text Encode (Prompt)",
-          },
-        },
-        62: {
-          inputs: {
-            seed: 746971534258503,
-            steps: 6,
-            cfg: 2,
-            sampler_name: "dpmpp_sde",
-            scheduler: "normal",
-            denoise: 0.8200000000000001,
-            model: ["57", 0],
-            positive: ["18", 0],
-            negative: ["18", 1],
-            latent_image: ["18", 2],
-          },
-          class_type: "KSampler",
-          _meta: {
-            title: "KSampler",
-          },
-        },
-        63: {
-          inputs: {
-            samples: ["62", 0],
-            vae: ["27", 2],
-          },
-          class_type: "VAEDecode",
-          _meta: {
-            title: "VAE Decode",
-          },
-        },
-        71: {
-          inputs: {
-            image: "mask_v1.png",
-            upload: "image",
-          },
-          class_type: "LoadImage",
-          _meta: {
-            title: "Load Image",
-          },
-        },
-        72: {
-          inputs: {
-            method: "intensity",
-            image: ["71", 0],
-          },
-          class_type: "Image To Mask",
-          _meta: {
-            title: "Image To Mask",
-          },
-        },
-        74: {
-          inputs: {
-            model: "wd-v1-4-moat-tagger-v2",
-            threshold: 0.35,
-            character_threshold: 0.85,
-            replace_underscore: false,
-            trailing_comma: false,
-            exclude_tags: "",
-            image: ["15", 0],
-          },
-          class_type: "WD14Tagger|pysssss",
-          _meta: {
-            title: "WD14 Tagger 🐍",
-          },
-        },
-        76: {
-          inputs: {
-            action: "replace",
-            tidy_tags: "no",
-            text_a: ["74", 0],
-            text_b:
-              "/(?!pink_hair|blue_hair|white_hair|black_hair|brown_hair|blonde_hair|orange_hair|bald)\\b\\w+\\b/",
-            text_c: "",
-          },
-          class_type: "StringFunction|pysssss",
-          _meta: {
-            title: "String Function 🐍",
-          },
-        },
-        80: {
-          inputs: {
-            text: ["82", 0],
-            blacklist_words: ",\n-",
-            replacement_text: "",
-          },
-          class_type: "CR Text Blacklist",
-          _meta: {
-            title: "🔤 Text Blacklist",
-          },
-        },
-        82: {
-          inputs: {
-            text: ["83", 0],
-            operation: "remove_spaces",
-          },
-          class_type: "CR Text Operation",
-          _meta: {
-            title: "🔤 CR Text Operation",
-          },
-        },
-        83: {
-          inputs: {
-            text: ["76", 0],
-            blacklist_words: "",
-            replacement_text: "",
-          },
-          class_type: "CR Text Blacklist",
-          _meta: {
-            title: "🔤 Text Blacklist",
-          },
-        },
-        95: {
-          inputs: {
-            delimiter: ", ",
-            clean_whitespace: "true",
-            text_a: ["97", 0],
-            text_b: ["80", 0],
-          },
-          class_type: "Text Concatenate",
-          _meta: {
-            title: "Text Concatenate",
-          },
-        },
-        97: {
-          inputs: {
-            prompt:
-              "highly detailed 3D cartoon, realistic yet stylized human face with exaggerated proportions, soft and realistic lighting, smooth shading, reflective surface,  smile",
-          },
-          class_type: "CR Prompt Text",
-          _meta: {
-            title: "Color Hint",
-          },
-        },
-        110: {
-          inputs: {
-            value: 584,
-          },
-          class_type: "Int-🔬",
-          _meta: {
-            title: "Int",
-          },
-        },
-        118: {
+        6: {
           inputs: {
             images: ["21", 0],
           },
@@ -378,14 +82,364 @@ app.post("/api/upload", upload.single("image"), (req, res) => {
             title: "Preview Image",
           },
         },
-        122: {
+        12: {
           inputs: {
-            unet_name: "STAT_16_2080-b-1-h-1024-w-1024_00001_.engine",
-            model_type: "sd1.x",
+            noise: ["13", 0],
+            guider: ["15", 0],
+            sampler: ["14", 0],
+            sigmas: ["16", 0],
+            latent_image: ["30", 2],
           },
-          class_type: "TensorRTLoader",
+          class_type: "SamplerCustomAdvanced",
           _meta: {
-            title: "TensorRT Loader",
+            title: "SamplerCustomAdvanced",
+          },
+        },
+        13: {
+          inputs: {
+            noise_seed: 653251254682503,
+          },
+          class_type: "RandomNoise",
+          _meta: {
+            title: "RandomNoise",
+          },
+        },
+        14: {
+          inputs: {
+            sampler_name: "dpmpp_2m",
+          },
+          class_type: "KSamplerSelect",
+          _meta: {
+            title: "KSamplerSelect",
+          },
+        },
+        15: {
+          inputs: {
+            cfg: 5,
+            positive: ["30", 0],
+            negative: ["30", 1],
+            model: ["19", 0],
+          },
+          class_type: "CFGGuider",
+          _meta: {
+            title: "CFGGuider",
+          },
+        },
+        16: {
+          inputs: {
+            scheduler: "karras",
+            steps: 35,
+            denoise: 0.46,
+            model: ["19", 0],
+          },
+          class_type: "BasicScheduler",
+          _meta: {
+            title: "BasicScheduler",
+          },
+        },
+        17: {
+          inputs: {
+            ckpt_name: "realvisxlV50_v50Bakedvae.safetensors",
+          },
+          class_type: "CheckpointLoaderSimple",
+          _meta: {
+            title: "Load Checkpoint",
+          },
+        },
+        18: {
+          inputs: {
+            vae_name: "SDXL/sdxl_vae.safetensors",
+          },
+          class_type: "VAELoader",
+          _meta: {
+            title: "Load VAE",
+          },
+        },
+        19: {
+          inputs: {
+            model: ["28", 0],
+          },
+          class_type: "DifferentialDiffusion",
+          _meta: {
+            title: "Differential Diffusion",
+          },
+        },
+        20: {
+          inputs: {
+            MODEL: ["19", 0],
+            CLIP: ["17", 1],
+            VAE: ["18", 0],
+          },
+          class_type: "Anything Everywhere3",
+          _meta: {
+            title: "Anything Everywhere3",
+          },
+        },
+        21: {
+          inputs: {
+            rescale_algorithm: "bislerp",
+            stitch: ["23", 0],
+            inpainted_image: ["22", 0],
+          },
+          class_type: "InpaintStitch",
+          _meta: {
+            title: "✂️ Inpaint Stitch",
+          },
+        },
+        22: {
+          inputs: {
+            samples: ["12", 0],
+            vae: ["18", 0],
+          },
+          class_type: "VAEDecode",
+          _meta: {
+            title: "VAE Decode",
+          },
+        },
+        23: {
+          inputs: {
+            context_expand_pixels: 128,
+            context_expand_factor: 1.1500000000000001,
+            fill_mask_holes: true,
+            blur_mask_pixels: 16,
+            invert_mask: false,
+            blend_pixels: 16,
+            rescale_algorithm: "bislerp",
+            mode: "forced size",
+            force_width: 1024,
+            force_height: 1024,
+            rescale_factor: 1,
+            min_width: 512,
+            min_height: 512,
+            max_width: 1024,
+            max_height: 1024,
+            padding: 64,
+            image: ["60", 0],
+            mask: ["70", 0],
+          },
+          class_type: "InpaintCrop",
+          _meta: {
+            title: "✂️ Inpaint Crop",
+          },
+        },
+        25: {
+          inputs: {
+            text: "smiling face, highly detailed, (3D cartoon:1.15)",
+            clip: ["17", 1],
+          },
+          class_type: "CLIPTextEncode",
+          _meta: {
+            title: "PositivePrompt",
+          },
+        },
+        26: {
+          inputs: {
+            text: "worst quality, bad quality, jpeg artifacts",
+            clip: ["17", 1],
+          },
+          class_type: "CLIPTextEncode",
+          _meta: {
+            title: "Negative Prompt",
+          },
+        },
+        28: {
+          inputs: {
+            object_to_patch: "diffusion_model",
+            residual_diff_threshold: 0.12,
+            start: 0,
+            end: 1,
+            max_consecutive_cache_hits: -1,
+            model: ["35", 0],
+          },
+          class_type: "ApplyFBCacheOnModel",
+          _meta: {
+            title: "Apply First Block Cache",
+          },
+        },
+        30: {
+          inputs: {
+            noise_mask: true,
+            positive: ["25", 0],
+            negative: ["26", 0],
+            pixels: ["23", 1],
+            mask: ["33", 0],
+            vae: ["18", 0],
+          },
+          class_type: "InpaintModelConditioning",
+          _meta: {
+            title: "InpaintModelConditioning",
+          },
+        },
+        33: {
+          inputs: {
+            amount: 6,
+            device: "gpu",
+            mask: ["23", 2],
+          },
+          class_type: "MaskBlur+",
+          _meta: {
+            title: "🔧 Mask Blur",
+          },
+        },
+        35: {
+          inputs: {
+            method: "fidelity",
+            weight: 0.85,
+            start_at: 0,
+            end_at: 1,
+            model: ["17", 0],
+            pulid: ["36", 0],
+            eva_clip: ["37", 0],
+            face_analysis: ["38", 0],
+            image: ["50", 0],
+          },
+          class_type: "ApplyPulid",
+          _meta: {
+            title: "Apply PuLID",
+          },
+        },
+        36: {
+          inputs: {
+            pulid_file: "ip-adapter_pulid_sdxl_fp16.safetensors",
+          },
+          class_type: "PulidModelLoader",
+          _meta: {
+            title: "Load PuLID Model",
+          },
+        },
+        37: {
+          inputs: {},
+          class_type: "PulidEvaClipLoader",
+          _meta: {
+            title: "Load Eva Clip (PuLID)",
+          },
+        },
+        38: {
+          inputs: {
+            provider: "CUDA",
+          },
+          class_type: "PulidInsightFaceLoader",
+          _meta: {
+            title: "Load InsightFace (PuLID)",
+          },
+        },
+        49: {
+          inputs: {
+            image: "main3.png",
+          },
+          class_type: "LoadImage",
+          _meta: {
+            title: "Load Image",
+          },
+        },
+        50: {
+          inputs: {
+            image: `facesImages/${req.file.filename}`,
+          },
+          class_type: "LoadImage",
+          _meta: {
+            title: "Load Image",
+          },
+        },
+        52: {
+          inputs: {
+            image: "mask3.png",
+          },
+          class_type: "LoadImage",
+          _meta: {
+            title: "Load Image",
+          },
+        },
+        56: {
+          inputs: {
+            value: 512,
+          },
+          class_type: "Int-🔬",
+          _meta: {
+            title: "Int",
+          },
+        },
+        57: {
+          inputs: {
+            value: 512,
+          },
+          class_type: "Int-🔬",
+          _meta: {
+            title: "Int",
+          },
+        },
+        58: {
+          inputs: {
+            measurement: "Pixels",
+            left: 0,
+            right: ["57", 0],
+            top: 0,
+            bottom: 0,
+            image: ["49", 0],
+          },
+          class_type: "easy imageInsetCrop",
+          _meta: {
+            title: "Left side",
+          },
+        },
+        59: {
+          inputs: {
+            measurement: "Pixels",
+            left: ["56", 0],
+            right: 0,
+            top: 0,
+            bottom: 0,
+            image: ["49", 0],
+          },
+          class_type: "easy imageInsetCrop",
+          _meta: {
+            title: "Right side",
+          },
+        },
+        60: {
+          inputs: {
+            direction: "left",
+            match_image_size: false,
+            image1: ["5", 0],
+            image2: ["58", 0],
+          },
+          class_type: "ImageConcanate",
+          _meta: {
+            title: "Image Concatenate",
+          },
+        },
+        64: {
+          inputs: {
+            rgthree_comparer: {
+              images: [
+                {
+                  name: "A",
+                  selected: true,
+                  url: "/api/view?filename=rgthree.compare._temp_kmsgc_00003_.png&type=temp&subfolder=&rand=0.7956293757408723",
+                },
+                {
+                  name: "B",
+                  selected: true,
+                  url: "/api/view?filename=rgthree.compare._temp_kmsgc_00004_.png&type=temp&subfolder=&rand=0.8652503887726214",
+                },
+              ],
+            },
+            image_a: ["21", 0],
+            image_b: ["60", 0],
+          },
+          class_type: "Image Comparer (rgthree)",
+          _meta: {
+            title: "Image Comparer (rgthree)",
+          },
+        },
+        70: {
+          inputs: {
+            method: "intensity",
+            image: ["52", 0],
+          },
+          class_type: "Image To Mask",
+          _meta: {
+            title: "Image To Mask",
           },
         },
       };
@@ -418,6 +472,8 @@ app.post("/api/aiUpload", upload.single("image"), async (req, res) => {
     await axios
       .post(`${process.env.NEYRO_SERVER_URL}/upload/image`, formData)
       .then((response) => {
+        console.log(response.data);
+
         return res.status(200).json(response.data);
       })
       .catch((err) => {
@@ -452,12 +508,14 @@ app.get("/api/getQueue", async (req, res) => {
 /* NEYRO CONNECT */
 app.post("/api/uploadImage", async (req, res) => {
   try {
-    const serverAddress = "62.68.146.215:35525";
+    const serverAddress = "81.94.158.192:8283";
 
     /* Generate client id from filename (file name = client id) */
     const filePath = `${req.body.filename}`;
     const filename = filePath.split("/").pop();
     const clientId = filename.split(".").shift();
+
+    console.log(filePath);
 
     const client = new ComfyUIClient(serverAddress, clientId);
 
