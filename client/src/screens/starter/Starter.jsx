@@ -1,6 +1,6 @@
 import React from "react";
 import style from "./style.module.scss";
-import manImg from "../../assets/images/after-chat-3.png";
+import manImg from "../../assets/images/first-img.png";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 
@@ -62,7 +62,7 @@ const Starter = () => {
             </button>
             <button
               onClick={() => {
-                changeLanguage("hi");
+                changeLanguage("urdu");
                 navigate("/conversion");
 
                 if (window.ym) {
@@ -70,7 +70,7 @@ const Starter = () => {
                 }
               }}
             >
-              हिंदी
+              Roman Urdu
             </button>
           </div>
         </div>

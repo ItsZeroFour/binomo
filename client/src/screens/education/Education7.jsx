@@ -19,13 +19,13 @@ const Education7 = () => {
 
             <div>
               <h3>Rajab Butt</h3>
-              <p>You have to predict whether the graph will go up or down</p>
+              <p>{t("educationGraphText1")}</p>
             </div>
           </div>
 
           <div className={style.educatio7__balance}>
             <div className={style.educatio7__balance__demo}>
-              <p>{t("education7Demo")}</p>
+              <p>{t("educationDemo")}</p>
               <h1>3000Rs</h1>
             </div>
 
@@ -41,8 +41,8 @@ const Education7 = () => {
           />
 
           <div className={style.educatio7__buttons}>
-            <Link to="/education-graphick-down">{t("education7Down")}</Link>
-            <Link to="/education-graphick-up">{t("education7Up")}</Link>
+            <Link to="/education-graphick-down">{t("educationDown")}</Link>
+            <Link to="/education-graphick-up">{t("educationUp")}</Link>
           </div>
         </div>
       </div>

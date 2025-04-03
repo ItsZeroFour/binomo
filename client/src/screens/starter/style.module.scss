@@ -58,18 +58,16 @@
 
 .starter__wrapper > img {
   position: absolute;
-  top: 27%;
+  top: 30%;
   // right: -85%;
 
-  width: 200%;
+  width: 150%;
 
   // width: 1200px;
 
   @media (max-width: 450px) {
-    width: 100%;
-    height: 70%;
-    object-fit: cover;
-    top: 23%;
+    width: 170%;
+    top: 35%;
   }
 
   @media (max-height: 760px) {

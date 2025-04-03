@@ -16,11 +16,11 @@ const Education2 = () => {
           <div className={style.education2__dates}>
             <div className={style.education2__items}>
               <div className={style.education2__item}>
-                <p>{t("education2Title1")}</p>
+                <p>{t("educationUpcoming")}</p>
               </div>
 
               <div className={style.education2__item}>
-                <p>{t("education2Title2")}</p>
+                <p>{t("educationPast")}</p>
               </div>
             </div>
 
@@ -65,26 +65,26 @@ const Education2 = () => {
           <ul className={style.education__news}>
             <li>
               <div>
-                <p>{t("education2Today")}</p>
+                <p>{t("educationToday")}</p>
                 <img src={japan} alt="japan" />
               </div>
-              <p>{t("education2Text1")}</p>
+              <p>{t("educationTodayText")}</p>
             </li>
 
             <li>
               <div>
-                <p>{t("education2Tomorrow")}</p>
+                <p>{t("educationTomorrow")}</p>
                 <img src={usa} alt="usa" />
               </div>
-              <p>{t("education2Text2")}</p>
+              <p>{t("educationTomorrowText1")}</p>
             </li>
 
             <li>
               <div>
-                <p>{t("education2Tomorrow")}</p>
+                <p>{t("educationTomorrow")}</p>
                 <img src={usa} alt="usa" />
               </div>
-              <p>{t("education2Text3")}</p>
+              <p>{t("educationTomorrowText2")}</p>
             </li>
           </ul>
 
@@ -95,10 +95,7 @@ const Education2 = () => {
 
             <div>
               <h3>Rajab Butt</h3>
-              <p>
-                I advise you to trade not just like that, but based on economic
-                data. Binomo has a calendar for tracking important reports.
-              </p>
+              <p>{t("educationText")}</p>
             </div>
           </div>
 
@@ -110,7 +107,7 @@ const Education2 = () => {
             }}
             to="/education-graphick-third"
           >
-            Go it!
+            {t("educationButton")}
           </Link>
         </div>
       </div>

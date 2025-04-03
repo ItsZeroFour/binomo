@@ -76,7 +76,7 @@ const FirstChat = () => {
               <img src={brotherImageAvatar} alt="Sister" />
             </div>
 
-            <h3>{t("sister")}</h3>
+            <h3>{t("brother")}</h3>
           </div>
 
           <div className={style.first__chat__history}>

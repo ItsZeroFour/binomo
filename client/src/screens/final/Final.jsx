@@ -7,6 +7,7 @@ import conversionImage from "../../assets/video/conversion.mov";
 
 const Conversion = () => {
   const { t } = useTranslation();
+  const { i18n } = useTranslation();
   const navigate = useNavigate();
 
   const handleLeadTracking = () => {
@@ -24,11 +25,24 @@ const Conversion = () => {
       <div className="container">
         <div className={`wrapper ${style.final__wrapper}`}>
           <div className={style.final__content}>
-            <h1>Register at Binomo.com</h1>
-            <p>
-              Enter promo code TRADINGGAME in the deposit section, add a minimum
-              deposit and get a chance to win DARAZ $100 certificate!
-            </p>
+            <h1>
+              {i18n.language === "en" ? (
+                <React.Fragment>
+                  {t("conversionTitle")}{" "}
+                  <Link to="binomo.com" target="_blank">
+                    Binomo.com
+                  </Link>
+                </React.Fragment>
+              ) : (
+                <React.Fragment>
+                  <Link to="binomo.com" target="_blank">
+                    Binomo.com
+                  </Link>{" "}
+                  {t("conversionTitle")}
+                </React.Fragment>
+              )}
+            </h1>
+            <p>{t("conversionText")}</p>
 
             <div className={style.final__img}>
               {/* <img src={tab} alt="tab" /> */}
@@ -36,12 +50,12 @@ const Conversion = () => {
             </div>
 
             <Link onClick={() => handleLeadTracking()} to="">
-              GET A CHANCE
+              {t("conversionLink1")}
             </Link>
 
             <div className={style.final__bottom}>
-              <Link to="/">Stay in the game</Link>
-              <Link to="/">Promotion rules</Link>
+              {/* <Link to="/">Stay in the game</Link> */}
+              <Link to="/">{t("conversionLink3")}</Link>
             </div>
           </div>
         </div>

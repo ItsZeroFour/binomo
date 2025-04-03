@@ -92,10 +92,7 @@ const FirstChat = () => {
                   <img src={brotherImageAvatar} alt="brother avatar" />
                 </div>
                 <div className={style.first__chat__message__content}>
-                  <p>
-                    Majid, hey! Do you remember you promised to buy us PSL
-                    season pass for my birthday? Well, the sale ends soon...
-                  </p>
+                  <p>{t("brotherChatText1")}</p>
                 </div>
               </motion.div>
             )}
@@ -109,10 +106,7 @@ const FirstChat = () => {
                 transition={transition}
               >
                 <div className={style.first__chat__message__content}>
-                  <p>
-                    Hey, bro! Yes, I remember it. I'm a little short of money,
-                    but I know what to do.
-                  </p>
+                  <p>{t("brotherChatText2")}</p>
                 </div>
                 <div className={style.first__chat__message__avatar}>
                   <img src={personalImageAvatar} alt="personal avatar" />
@@ -137,7 +131,7 @@ const FirstChat = () => {
                 to="/after-chat"
                 className={`${style.fadeInLink} ${showLink && style.show}`}
               >
-                Go to Binomo
+                {t("brotherChatButton")}
               </Link>
             </motion.div>
           )}

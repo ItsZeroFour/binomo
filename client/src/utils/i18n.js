@@ -9,7 +9,7 @@ i18n
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
-    supportedLngs: ['en', 'hi'], // поддерживаемые языки: английский и хинди
+    supportedLngs: ['en', 'urdu'], // поддерживаемые языки: английский и хинди
     fallbackLng: 'en', // язык по умолчанию
     detection: {
       order: ['querystring', 'cookie', 'localStorage', 'navigator', 'htmlTag', 'path', 'subdomain'],

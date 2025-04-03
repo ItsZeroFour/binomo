@@ -76,16 +76,12 @@ const AfterChat = () => {
             <div
               className={`${style.after_chat__person} ${style.after_chat__person__first}`}
             >
-              <div className={style.after_chat__message}>
-                Hey, it's Rajab Butt! Didn't expect to see me here? <br /> I
-                know you want to buy a PSL season ticket but you don't have
-                enough money, right? I'll tell you how you can make some money.
-              </div>
+              <div className={style.after_chat__message}>{t("afterChat1")}</div>
 
               <img src={afterChatPerson1} alt="after chat 1" />
 
               <button onClick={() => setShowScreenIndex(1)}>
-                Wow! Where am I?
+                {t("afterChatButton1")}
               </button>
             </div>
           ) : showScreenIndex === 1 ? (
@@ -93,16 +89,13 @@ const AfterChat = () => {
               className={`${style.after_chat__person} ${style.after_chat__person__second}`}
             >
               <div className={style.after_chat__message}>
-                <p>
-                  We are on Binomo website! Binomo is a  high-end trading
-                  platform with a wide range of financial assets.{" "}
-                </p>
+                <p>{t("afterChat2")}</p>
               </div>
 
               <img src={afterChatPerson2} alt="after chat 2" />
 
               <button onClick={() => setShowScreenIndex(2)}>
-                Can I earn money here?
+                {t("afterChatButton2")}
               </button>
             </div>
           ) : showScreenIndex === 2 ? (
@@ -110,11 +103,7 @@ const AfterChat = () => {
               className={`${style.after_chat__person} ${style.after_chat__person__third}`}
             >
               <div className={style.after_chat__message}>
-                <p>
-                  Yes! Trade amount starting from 3000Rs so you won't lose a
-                  large amount of funds while you're still learning how to
-                  trade.
-                </p>
+                <p>{t("afterChat3")}</p>
               </div>
 
               <img src={afterChatPerson3} alt="after chat 3" />
@@ -127,7 +116,7 @@ const AfterChat = () => {
                 }}
                 to="/education-7"
               >
-                Let’s train!
+                {t("afterChatButton3")}
               </Link>
             </div>
           ) : showScreenIndex === 3 ? (

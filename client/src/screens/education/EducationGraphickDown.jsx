@@ -51,7 +51,7 @@ const EducationGraphickUp = () => {
             style={text ? { marginTop: 0 } : { marginTop: 20 }}
           >
             <div className={style.educatio7__balance__demo}>
-              <p>{t("education7Demo")}</p>
+              <p>{t("educationDemo")}</p>
               <h1>2900Rs</h1>
             </div>
 

@@ -61,13 +61,13 @@ const EducationGraphickThird = () => {
             >
               <img src={person2} alt="person" />
               <div>
-                <h3>{t("education1Name")}</h3>
+                <h3>Rajab Butt</h3>
                 <p>{t("educationGraphickThirdText")}</p>
               </div>
             </div>
           ) : (
             <div className={style.education__graphick__waiting}>
-              <h1 style={{ fontSize: 52 }}>Nеxt few days...</h1>
+              <h1 style={{ fontSize: 52 }}>{t("graphickThirdTitle")}</h1>
               <p>🗓️</p>
             </div>
           )}
@@ -75,7 +75,7 @@ const EducationGraphickThird = () => {
           {text && (
             <div className={style.educatio7__balance}>
               <div className={style.educatio7__balance__demo}>
-                <p>{t("education7Demo")}</p>
+                <p>{t("educationDemo")}</p>
                 <h1>{text ? "145250" : "9900"}Rs</h1>
               </div>
 
@@ -96,14 +96,23 @@ const EducationGraphickThird = () => {
             style={{ height: 60, width: "100%" }}
             className={style.educatio__graphick__buttons__wrapper}
           >
-            {showButton && (
+            {showButton ? (
               <motion.div
                 className={style.educatio_graphick__buttons}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.5 }}
               >
-                <Link to="/group-chat">Call sister</Link>
+                <Link to="/group-chat">{t("graphickThirdButton")}</Link>
+              </motion.div>
+            ) : (
+              <motion.div
+                className={style.educatio_graphick__buttons}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.5 }}
+              >
+                <Link to="/group-chat">{t("graphickThirdSkip")}</Link>
               </motion.div>
             )}
           </div>
