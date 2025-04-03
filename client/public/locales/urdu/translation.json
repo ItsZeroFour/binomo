@@ -41,5 +41,34 @@
 
   "graphickThirdTitle": "Agle chand din...",
   "graphickThirdButton": "Behn ko call karo",
-  "graphickThirdSkip": "Apni kahani chhodo"
+  "graphickThirdSkip": "Apni kahani chhodo",
+
+  "secondChatText1": "Bhai, maine trading se paisa kama liya hai! Ab main PSL ka pass hum dono ke liye le sakta hoon!",
+  "secondChatText2": "Wah, mujhe bohat khushi hui! Tum toh duniya ke sab se behtareen bhai ho!",
+  "secondChatButton": "Match par chalo",
+
+  "bannerTitle": "Inaam jeetain",
+  "bannerText": "Tawajjo: Trading mein maali risk shamil hai.",
+  "bannerLink": "Qawaid",
+
+  "gameStartText": "Zabardast! Ab chalo aik saath photo lete hain",
+  "gameStartLink1": "Chalo",
+  "gameStartLink2": "Nahin, shukriya",
+
+  "uploadImageTitle": "Rajab Butt ke saath photo lein",
+  "uploadImageRules": "Is box ko check karke, aap tasdeeq karte hain ke aapne in",
+  "uploadImageRulesLink": "Rules of Use",
+  "uploadImageRules2": "ko parha, samjha aur un par amal karne se ittefaq karte hain.",
+  "uploadImagePhoto": "Tasveer lein",
+  "uploadImageUpload": "Tasveer upload karein",
+  "uploadImageText": "AI aap aur Rajab Butt ke saath tasveer generate karega",
+
+  "generateText": "Intezaar ho raha hai.....",
+
+  "uploadButton1": "Theek hai",
+  "uploadButton2": "Koi aur tasveer azmaein",
+
+  "generatedLink1": "Share/Download karein",
+  "generatedLink2": "Koi aur tasveer azmaein",
+  "generatedLink3": "Shami se baat karein"
 }

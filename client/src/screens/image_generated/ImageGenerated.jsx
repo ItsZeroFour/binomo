@@ -86,7 +86,7 @@ const ImageGenerated = () => {
 
   const downloadImage = async () => {
     try {
-      const imageUrl = `${process.env.REACT_APP_DOMAIN_NAME.replace(
+      const imageUrl = `${process.env.REACT_APP_SERVER_URL.replace(
         "/api",
         ""
       )}/aiGet/${aiImageName}`;
@@ -111,7 +111,7 @@ const ImageGenerated = () => {
   const copyToClipboard = async () => {
     try {
       await navigator.clipboard.writeText(
-        `${process.env.REACT_APP_DOMAIN_NAME.replace(
+        `${process.env.REACT_APP_SERVER_URL.replace(
           "/api",
           ""
         )}/aiGet/${aiImageName}`
@@ -180,12 +180,12 @@ const ImageGenerated = () => {
               <div className={style.image_generation__reshare__buttons}>
                 <button onClick={downloadImage}>
                   <img src={download} alt="download" />
-                  <p>{t("gameDownload")}</p>
+                  <p>Download</p>
                 </button>
 
                 <button onClick={copyToClipboard}>
                   <img src={copy} alt="Copy" />
-                  <p>{t("gameCopy")}</p>
+                  <p>Copy</p>
                 </button>
               </div>
             </div>
@@ -193,10 +193,10 @@ const ImageGenerated = () => {
 
           <div className={style.image_generation__wrapper__buttons}>
             <button onClick={() => setReshare(true)}>
-              {t("imageGeneratedButton1")}
+              {t("generatedLink1")}
             </button>
-            <Link to="/upload-image">{t("imageGeneratedButton2")}</Link>
-            <Link to="/final">{t("imageGeneratedButton3")}</Link>
+            <Link to="/upload-image">{t("generatedLink2")}</Link>
+            <Link to="/final">{t("generatedLink3")}</Link>
           </div>
         </div>
       </div>

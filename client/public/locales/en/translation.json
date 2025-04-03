@@ -43,7 +43,31 @@
   "graphickThirdButton": "Call sister",
   "graphickThirdSkip": "SKIP YOUR STORY",
 
-  "secondChatText1": "",
-  "secondChatText2": "",
-  "secondChatButton": ""
+  "secondChatText1": "Bro, I've earned money on trading! Now I can buy PSL pass for us!",
+  "secondChatText2": "Wow, I'm so glad! You are the best brother in the world!",
+  "secondChatButton": "Go to the match",
+
+  "bannerTitle": "Win A PRIZE",
+  "bannerText": "Warning: trading involves financial risks.",
+  "bannerLink": "Rules",
+
+  "gameStartText": "Great! Now let's make a photo together",
+  "gameStartLink1": "Let`s go",
+  "gameStartLink2": "No, thanks",
+
+  "uploadImageTitle": "Take a photo with Rajab butt",
+  "uploadImageRules": "By checking this box, You confirm that You have read, understood, and agree to be bound by these",
+  "uploadImageRulesLink": "Rules of Use",
+  "uploadImagePhoto": "Take a photo",
+  "uploadImageUpload": "Upload an image",
+  "uploadImageText": "AI will generate photo with you and Rajab Butt",
+
+  "generateText": "Waiting.....",
+
+  "uploadButton1": "Ok",
+  "uploadButton2": "Try another photo",
+
+  "generatedLink1": "Share/Download",
+  "generatedLink2": "Try another photo",
+  "generatedLink3": "Talk with Shami"
 }

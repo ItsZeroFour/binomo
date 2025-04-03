@@ -28,9 +28,9 @@ const GameStart = () => {
               }}
               to="/upload-image"
             >
-              {t("gameStartButton1")}
+              {t("gameStartLink1")}
             </Link>
-            <Link to="/final">{t("gameStartButton2")}</Link>
+            <Link to="/final">{t("gameStartLink2")}</Link>
           </div>
         </div>
       </div>

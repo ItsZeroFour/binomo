@@ -5,7 +5,7 @@ import tab from "../../assets/images/Tab.png";
 import { useTranslation } from "react-i18next";
 import conversionImage from "../../assets/video/conversion.mov";
 
-const ConversionFirst = () => {
+const ConversionFirst = ({ redirectUrl }) => {
   const { t } = useTranslation();
   const { i18n } = useTranslation();
   const navigate = useNavigate();

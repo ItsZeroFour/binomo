@@ -92,10 +92,7 @@ const FirstChat = () => {
                   <img src={personalImageAvatar} alt="sister avatar" />
                 </div>
                 <div className={style.first__chat__message__content}>
-                  <p>
-                    Sis, I've earned money on trading! Now I can buy PSL pass
-                    for us!
-                  </p>
+                  <p>{t("secondChatText1")}</p>
                 </div>
               </motion.div>
             )}
@@ -109,9 +106,7 @@ const FirstChat = () => {
                 transition={transition}
               >
                 <div className={style.first__chat__message__content}>
-                  <p>
-                    Honey, I'm so glad! You are the best brother in the world!
-                  </p>
+                  <p>{t("secondChatText2")}</p>
                 </div>
                 <div className={style.first__chat__message__avatar}>
                   <img src={brotherImageAvatar} alt="personal avatar" />
@@ -136,7 +131,7 @@ const FirstChat = () => {
                 to="/game-start"
                 className={`${style.fadeInLink} ${showLink && style.show}`}
               >
-                Go to the match
+                {t("secondChatButton")}
               </Link>
             </motion.div>
           )}

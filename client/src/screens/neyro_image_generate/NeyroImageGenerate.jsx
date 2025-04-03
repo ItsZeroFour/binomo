@@ -7,6 +7,7 @@ import { useTranslation } from "react-i18next";
 
 const NeyroImageGenerate = () => {
   const [aiImageGeneratedName, setAiImageGeneratedName] = useState("");
+  const [countdown, setCountdown] = useState(15); // Таймер отсчета
   const location = useLocation();
   const { t } = useTranslation();
 
@@ -18,6 +19,21 @@ const NeyroImageGenerate = () => {
       return navigate("/upload-image");
     }
   }, [file]);
+
+  useEffect(() => {
+    // Запуск таймера
+    const timer = setInterval(() => {
+      setCountdown((prev) => {
+        if (prev <= 1) {
+          clearInterval(timer);
+          return 0;
+        }
+        return prev - 1;
+      });
+    }, 1000);
+
+    return () => clearInterval(timer); // Очистка таймера при размонтировании
+  }, []);
 
   async function uploadImage() {
     try {
@@ -53,9 +69,11 @@ const NeyroImageGenerate = () => {
         { filename: `${filename}` }
       );
 
+      console.log(uploadImageRes);
+
       if (uploadImageRes.data.images) {
         setAiImageGeneratedName(
-          uploadImageRes.data.images[118][0].image.filename
+          uploadImageRes.data.images[6][0].image.filename
         );
       }
     } catch (err) {}
@@ -94,8 +112,9 @@ const NeyroImageGenerate = () => {
             <div className={style.neyro_image_generate__banner}>
               <Banner />
             </div>
-
-            <p>{t("uploadImageWaiting")}</p>
+            <p>
+              {t("generateText")} [{countdown}]
+            </p>
           </div>
         </div>
       </div>

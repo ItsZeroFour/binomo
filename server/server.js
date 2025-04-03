@@ -46,7 +46,7 @@ const upload = multer({ storage, limits: { fileSize: 5 * 1024 * 1024 } });
 
 let prompt;
 
-app.post("/api/upload", upload.single("image"), (req, res) => {
+app.post("/upload", upload.single("image"), (req, res) => {
   try {
     if (!req.file) {
       res.json({ message: "Ошибка при загрузке файла" });
@@ -452,7 +452,7 @@ app.post("/api/upload", upload.single("image"), (req, res) => {
   }
 });
 
-app.post("/api/aiUpload", upload.single("image"), async (req, res) => {
+app.post("/aiUpload", upload.single("image"), async (req, res) => {
   try {
     if (!req.file) {
       return res.status(400).json({ error: "Файл не загружен." });
@@ -477,6 +477,8 @@ app.post("/api/aiUpload", upload.single("image"), async (req, res) => {
         return res.status(200).json(response.data);
       })
       .catch((err) => {
+        console.log(err);
+
         return res.status(500).json({ error: true });
       });
   } catch (err) {
@@ -487,7 +489,7 @@ app.post("/api/aiUpload", upload.single("image"), async (req, res) => {
   }
 });
 
-app.get("/api/getQueue", async (req, res) => {
+app.get("/getQueue", async (req, res) => {
   try {
     await axios
       .get(`${process.env.NEYRO_SERVER_URL}/queue`)
@@ -506,7 +508,7 @@ app.get("/api/getQueue", async (req, res) => {
 });
 
 /* NEYRO CONNECT */
-app.post("/api/uploadImage", async (req, res) => {
+app.post("/uploadImage", async (req, res) => {
   try {
     const serverAddress = "81.94.158.192:8283";
 
@@ -522,6 +524,8 @@ app.post("/api/uploadImage", async (req, res) => {
     await client.connect();
 
     const images = await client.getImages(prompt);
+
+    console.log(images);
 
     const outputDir = "./savedAi";
     await client.saveImages(images, outputDir);

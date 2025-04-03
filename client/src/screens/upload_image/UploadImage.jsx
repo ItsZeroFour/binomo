@@ -14,6 +14,7 @@ const UploadImage = () => {
   const [imageLoading, setImageLoading] = useState(false);
   const navigate = useNavigate();
   const { t } = useTranslation();
+  const { i18n } = useTranslation();
 
   async function checkCamera() {
     try {
@@ -120,7 +121,7 @@ const UploadImage = () => {
               {" "}
               {!image ? (
                 <>
-                  <h1>Take a photo with Rajab butt</h1>
+                  <h1>{t("uploadImageTitle")}</h1>
 
                   <div
                     className={style.upload_image__checkbox}
@@ -129,12 +130,22 @@ const UploadImage = () => {
                     <div className={style.upload_image__checkbox__item}>
                       {check ? <div></div> : ""}
                     </div>
-                    <p>
-                      {t("uploadImageText")}{" "}
-                      <Link to="https://blog.binomo.com/celebrityphoto/">
-                        {t("uploadImageRules")}.
-                      </Link>
-                    </p>
+                    {i18n.language === "en" ? (
+                      <p>
+                        {t("uploadImageRules")}{" "}
+                        <Link to="https://blog.binomo.com/celebrityphoto/">
+                          {t("uploadImageRulesLink")}.
+                        </Link>
+                      </p>
+                    ) : (
+                      <p>
+                        {t("uploadImageRules")}{" "}
+                        <Link to="https://blog.binomo.com/celebrityphoto/">
+                          {t("uploadImageRulesLink")}.
+                        </Link>{" "}
+                        {t("uploadImageRules2")}
+                      </p>
+                    )}
                   </div>
 
                   <div
@@ -160,7 +171,7 @@ const UploadImage = () => {
                     >
                       <img src={cameraImg} alt="camera" />
                       <h2>{t("uploadImagePhoto")}</h2>
-                      <p>AI will generate photo with you and Rajab Butt</p>
+                      <p>{t("uploadImageText")}</p>
                     </button>
 
                     <input
@@ -186,7 +197,7 @@ const UploadImage = () => {
                     >
                       <img src={imageImg} alt="image" />
                       <h2>{t("uploadImageUpload")}</h2>
-                      <p>AI will generate photo with you and Rajab Butt</p>
+                      <p>{t("uploadImageText")}</p>
                     </label>
                   </div>
                 </>
@@ -195,11 +206,9 @@ const UploadImage = () => {
                   <img src={image} alt="camera image" />
 
                   <div className={style.camera__buttons}>
-                    <button onClick={uploadImage}>
-                      {t("uploadCameraButton2")}
-                    </button>
+                    <button onClick={uploadImage}>{t("uploadButton1")}</button>
                     <button onClick={() => setImage("")}>
-                      {t("uploadCameraButton1")}
+                      {t("uploadButton2")}
                     </button>
                   </div>
                 </div>
@@ -207,7 +216,7 @@ const UploadImage = () => {
             </>
           ) : (
             <div className={style.upload_image__loading}>
-              <p>{t("uploadImageLoading")}</p>
+              <p>Loading...</p>
             </div>
           )}
         </div>

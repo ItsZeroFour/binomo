@@ -3,13 +3,18 @@ import style from "./style.module.scss";
 import gifs from "../../assets/icons/gifs.png";
 import coins from "../../assets/icons/coins.png";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const Banner = () => {
-  const [text, setText] = useState("Win A PRIZE");
+  const { t } = useTranslation();
+
+  const [text, setText] = useState(`${t("bannerTitle")}`);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setText((prevText) => (prevText === "Win A PRIZE" ? "" : "Win A PRIZE"));
+      setText((prevText) =>
+        prevText === `${t("bannerTitle")}` ? "" : `${t("bannerTitle")}`
+      );
     }, 4000);
     return () => clearInterval(interval);
   }, []);
@@ -36,7 +41,7 @@ const Banner = () => {
         <img src={gifs} alt="gifs" />
         <div className={style.banner__text}>
           <h2>
-            {text !== "Win A PRIZE" && (
+            {text !== `${t("bannerTitle")}` && (
               <div>
                 <svg
                   width="150"
@@ -63,7 +68,7 @@ const Banner = () => {
             {text}
           </h2>
           <p>
-            Warning: trading involves financial risks.{" "}
+            {t("bannerText")}{" "}
             <Link
               onClick={() => {
                 if (window.ym) {
@@ -78,7 +83,7 @@ const Banner = () => {
               target="_blank"
               rel="noreferrer"
             >
-              Rules
+              {t("bannerLink")}
             </Link>
           </p>
         </div>
