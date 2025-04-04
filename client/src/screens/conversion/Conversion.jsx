@@ -45,13 +45,22 @@ const ConversionFirst = ({ redirectUrl }) => {
               <video src={conversionImage} autoPlay loop muted></video>
             </div>
 
-            <Link onClick={() => handleLeadTracking()} to="">
+            <Link
+              onClick={() => handleLeadTracking()}
+              to={redirectUrl}
+              target="_blank"
+            >
               {t("conversionLink1")}
             </Link>
 
             <div className={style.final__bottom}>
               <Link to="/main">{t("conversionLink2")}</Link>
-              <Link to="/">{t("conversionLink3")}</Link>
+              <Link
+                to="https://blog.binomo.com/tradinggame2025"
+                target="_blank"
+              >
+                {t("conversionLink3")}
+              </Link>
             </div>
           </div>
         </div>

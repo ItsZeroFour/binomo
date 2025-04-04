@@ -61,8 +61,6 @@ function App() {
     }
   }, [location.search]);
 
-  console.log(redirectUrl);
-
   useEffect(() => {
     preloadImages([
       afterChat1,
