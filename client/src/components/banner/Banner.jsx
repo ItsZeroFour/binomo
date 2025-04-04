@@ -34,7 +34,7 @@ const Banner = () => {
             window.ym(100582088, "reachGoal", "WIN PRIZE ");
           }
         }}
-        to="/after-chat?index=5"
+        to="/conversion"
         target="_blank"
         rel="noreferrer"
       >
