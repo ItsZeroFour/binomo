@@ -95,19 +95,19 @@
     margin-bottom: -230px;
 
     a {
-      &:first-child {
-        background: var(--color-yellow);
-        width: 100%;
-        text-align: center;
-        padding: 10px;
-        border-radius: 30px;
-        display: block;
-        margin-bottom: 10px;
-        text-transform: uppercase;
-        font-size: 20px;
-      }
+      // &:first-child {
+      //   background: var(--color-yellow);
+      //   width: 100%;
+      //   text-align: center;
+      //   padding: 10px;
+      //   border-radius: 30px;
+      //   display: block;
+      //   margin-bottom: 10px;
+      //   text-transform: uppercase;
+      //   font-size: 20px;
+      // }
 
-      &:last-child {
+      &:first-child {
         color: var(--color-yellow);
         text-decoration: underline;
       }
