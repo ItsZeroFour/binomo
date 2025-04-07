@@ -46,7 +46,7 @@ function App() {
   const [redirectUrl, setRedirectUrl] = useState(() => {
     return (
       localStorage.getItem("redirectUrl") ||
-      "https://binomo.com/cashier?code=TRADINGGAME"
+      "https://binomo.com/cashier?code=TRADINGGAME25"
     );
   });
   const location = useLocation();

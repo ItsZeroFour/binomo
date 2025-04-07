@@ -51,7 +51,7 @@ const Starter = () => {
             <button
               onClick={() => {
                 changeLanguage("en");
-                navigate("/conversion");
+                navigate("/main");
 
                 if (window.ym) {
                   window.ym(100582088, "reachGoal", "eng");
@@ -63,7 +63,7 @@ const Starter = () => {
             <button
               onClick={() => {
                 changeLanguage("urdu");
-                navigate("/conversion");
+                navigate("/main");
 
                 if (window.ym) {
                   window.ym(100582088, "reachGoal", "pakistan");
