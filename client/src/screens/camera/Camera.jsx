@@ -70,7 +70,6 @@ const Camera = () => {
     }
   }, [image]);
 
-
   const uploadImage = async () => {
     if (!image) return;
     const response = await fetch(image);

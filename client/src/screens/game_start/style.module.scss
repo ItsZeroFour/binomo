@@ -64,6 +64,18 @@
     border-color: transparent transparent #ffffff transparent;
     transform: rotate(270deg);
   }
+
+  @media (max-height: 840px) {
+    top: 55%;
+  }
+
+  @media (max-height: 780px) {
+    top: 60%;
+  }
+
+  @media (max-height: 740px) {
+    top: 57%;
+  }
 }
 
 .game_start__buttons {
@@ -87,5 +99,9 @@
 
   @media (max-width: 450px) {
     margin-bottom: 125px;
+  }
+
+  @media (max-height: 780px) {
+    margin-bottom: 100px;
   }
 }
