@@ -60,7 +60,7 @@ const Conversion = ({ redirectUrl }) => {
             <div className={style.final__bottom}>
               {/* <Link to="/">Stay in the game</Link> */}
               <Link
-                to="https://blog.binomo.com/tradinggame2025"
+                to="https://blog.binomo.com/tradinggame2025/"
                 target="_blank"
               >
                 {t("conversionLink3")}

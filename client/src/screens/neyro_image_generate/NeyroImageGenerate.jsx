@@ -7,7 +7,7 @@ import { useTranslation } from "react-i18next";
 
 const NeyroImageGenerate = () => {
   const [aiImageGeneratedName, setAiImageGeneratedName] = useState("");
-  const [countdown, setCountdown] = useState(15); // Таймер отсчета
+  const [countdown, setCountdown] = useState(30); // Таймер отсчета
   const location = useLocation();
   const { t } = useTranslation();
 

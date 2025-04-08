@@ -24,16 +24,11 @@ const ConversionFirst = ({ redirectUrl }) => {
             <h1>
               {i18n.language === "en" ? (
                 <React.Fragment>
-                  {t("conversionTitle")}{" "}
-                  <Link to="binomo.com" target="_blank">
-                    Binomo.com
-                  </Link>
+                  {t("conversionTitle")} Binomo.com
                 </React.Fragment>
               ) : (
                 <React.Fragment>
-                  <Link to="binomo.com" target="_blank">
-                    Binomo.com
-                  </Link>{" "}
+                  Binomo.com
                   {t("conversionTitle")}
                 </React.Fragment>
               )}
@@ -56,7 +51,7 @@ const ConversionFirst = ({ redirectUrl }) => {
             <div className={style.final__bottom}>
               <Link to="/main">{t("conversionLink2")}</Link>
               <Link
-                to="https://blog.binomo.com/tradinggame2025"
+                to="https://blog.binomo.com/tradinggame2025/"
                 target="_blank"
               >
                 {t("conversionLink3")}
