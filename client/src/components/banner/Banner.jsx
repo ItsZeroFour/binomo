@@ -79,7 +79,7 @@ const Banner = () => {
                   window.fbq("track", "CompleteRegistration");
                 }
               }}
-              to="https://blog.binomo.com/tradinggame2024/"
+              to="https://blog.binomo.com/tradinggame2025/"
               target="_blank"
               rel="noreferrer"
             >

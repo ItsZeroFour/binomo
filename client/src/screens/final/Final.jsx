@@ -28,16 +28,11 @@ const Conversion = ({ redirectUrl }) => {
             <h1>
               {i18n.language === "en" ? (
                 <React.Fragment>
-                  {t("conversionTitle")}{" "}
-                  <Link to="binomo.com" target="_blank">
-                    Binomo.com
-                  </Link>
+                  {t("conversionTitle")} Binomo.com
                 </React.Fragment>
               ) : (
                 <React.Fragment>
-                  <Link to="binomo.com" target="_blank">
-                    Binomo.com
-                  </Link>{" "}
+                  Binomo.com
                   {t("conversionTitle")}
                 </React.Fragment>
               )}
