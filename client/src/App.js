@@ -46,7 +46,7 @@ function App() {
   const [redirectUrl, setRedirectUrl] = useState(() => {
     return (
       localStorage.getItem("redirectUrl") ||
-      "https://binomo.com/cashier?code=TRADINGGAME25"
+      "https://binomo.com/cashier?code=TRADINGGAME25&country=PK"
     );
   });
   const location = useLocation();
@@ -55,7 +55,7 @@ function App() {
     const searchParams = new URLSearchParams(location.search);
     const paramsString = searchParams.toString();
     if (paramsString) {
-      const newUrl = `https://binomo.com/cashier?code=TRADINGGAME&${paramsString}`;
+      const newUrl = `https://binomo.com/cashier?code=TRADINGGAME25&country=PK&${paramsString}`;
       setRedirectUrl(newUrl);
       localStorage.setItem("redirectUrl", newUrl);
     }
