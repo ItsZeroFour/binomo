@@ -19,23 +19,15 @@ const Banner = () => {
     return () => clearInterval(interval);
   }, []);
 
-  const handleLeadTracking = () => {
-    if (window.fbq !== undefined) {
-      window.fbq("track", "Lead");
-    }
-  };
-
   return (
     <div className={style.banner}>
       <Link
         onClick={() => {
-          handleLeadTracking();
           if (window.ym) {
             window.ym(100582088, "reachGoal", "WIN PRIZE ");
           }
         }}
         to="/conversion"
-        target="_blank"
         rel="noreferrer"
       >
         <img src={gifs} alt="gifs" />
