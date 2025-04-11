@@ -22,13 +22,12 @@ const Banner = () => {
   return (
     <div className={style.banner}>
       <Link
-        onClick={() => {
+        onClick={async () => {
           if (window.ym) {
-            window.ym(100582088, "reachGoal", "WIN PRIZE ");
+            await window.ym(100582088, "reachGoal", "banner");
           }
         }}
         to="/conversion"
-        rel="noreferrer"
       >
         <img src={gifs} alt="gifs" />
         <div className={style.banner__text}>
