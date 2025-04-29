@@ -41,7 +41,7 @@ const Starter = () => {
 
           <h1>Binomo trading game</h1>
           <p>
-            Complete our game, and get a chance to
+            Complete our game and get a chance to
             win DARAZ $100 certificate!
           </p>
 
