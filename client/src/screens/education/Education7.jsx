@@ -18,7 +18,7 @@ const Education7 = () => {
             <img src={person} alt="person" />
 
             <div>
-              <h3>Rajab Butt</h3>
+              <h3>Mr. Trader</h3>
               <p>{t("educationGraphText1")}</p>
             </div>
           </div>
