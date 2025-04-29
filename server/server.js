@@ -325,7 +325,7 @@ app.post("/upload", upload.single("image"), (req, res) => {
         },
         49: {
           inputs: {
-            image: "main3.png",
+            image: "one.png",
           },
           class_type: "LoadImage",
           _meta: {
